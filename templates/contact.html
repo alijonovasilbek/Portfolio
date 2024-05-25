@@ -1,0 +1,61 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+		<div id="colorlib-main">
+
+			<section class="ftco-section contact-section">
+	      <div class="container">
+	        <div class="row d-flex mb-5 contact-info">
+	          <div class="col-md-12 mb-4">
+	            <h2 class="h4 font-weight-bold">Contact Information</h2>
+	          </div>
+	          <div class="w-100"></div>
+	          <div class="col-md-3">
+	            <p><span>Address:</span>Tashkent city, Shayhontohur district, Sebzor street 1a 33</p>
+	          </div>
+	          <div class="col-md-3">
+				  <p><span>Phone:</span> <a href="tel://+998999220204">+998999220204</a></p>
+	          </div>
+	          <div class="col-md-3">
+	            <p><span>Email:</span> <a href="alijonovasilbek058@gmail.com">alijonovasilbek@gmail.com</a></p>
+	          </div>
+	          <div class="col-md-3">
+	            <p><span>Telegram</span> <a href="https://t.me/asilbek_ax">@asilbek_ax</a></p>
+	          </div>
+	        </div>
+	        <div class="row block-9">
+	          <div class="col-md-6 order-md-last pr-md-5">
+	            <form action="{% url 'con' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+				  <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+				</div>
+				<div class="form-group">
+				  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+				</div>
+				<div class="form-group">
+				  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+				</div>
+				<div class="form-group">
+				  <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+				</div>
+				<div class="form-group">
+				  <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+				</div>
+          </form>
+
+
+	          </div>
+
+	          <div class="col-md-6">
+	          	<div id="">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2790.54536302047!2d69.25006871963926!3d41.329290881542526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b706615ebc7%3A0x49998673872aaf3d!2z0KHQtdCx0LfQvtGAINC60Z7Rh9Cw0YHQuCAxLCDQotC-c2hrZW50LCBUb3Noa2VudCwgT2B6YmVraXN0b24!5e0!3m2!1suz!2s!4v1714537678474!5m2!1suz!2s"
+							width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+	          </div>
+	        </div>
+	      </div>
+	    </section>
+{% endblock %}
+		</div>
